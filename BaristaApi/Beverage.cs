@@ -23,6 +23,11 @@ class Espresso : IBeverage
 	public List<string> Ingredients { get; } = new List<string> { "Espresso" };
 		
 	public string CupType { get; } = "Small";
+
+	public IBeverage ToBeverage()
+    {
+
+    }
 }
 
 class Latte : IBeverage
