@@ -10,6 +10,7 @@ enum CoffeSorts
 	Robusta,
 	Arabica, 
 
+
 }
 class Bean
 {
@@ -18,10 +19,13 @@ class Bean
 }
 
 class Espresso : IBeverage
-{
-	public List<string> Ingredients => {}
 
-	public string CupType => throw new System.NotImplementedException();
+{
+
+	public List<string> Ingredients => { "Espresso"};
+		
+
+	public string CupType => "Small";
 }
 
 class Latte : IBeverage
