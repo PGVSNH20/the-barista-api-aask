@@ -5,9 +5,21 @@ public interface IBeverage{
 	string CupType { get; }
 }
 
+enum CoffeSorts
+{
+	Robusta,
+	Arabica, 
+
+}
+class Bean
+{
+	int AmountInG { get; }
+	string Sort { get; }
+}
+
 class Espresso : IBeverage
 {
-	public List<string> Ingredients => throw new System.NotImplementedException();
+	public List<string> Ingredients => {}
 
 	public string CupType => throw new System.NotImplementedException();
 }
