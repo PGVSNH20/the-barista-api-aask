@@ -11,9 +11,9 @@ namespace BaristaApi
     {
         public List<Ingredient> Ingredients { get; } = new List<Ingredient>();
 
-        public IEspressoMachine AddBeans()
+        public IEspressoMachine AddBeans(CoffeSorts sort)
         {
-
+            Ingredients.Add(new Bean() { Name = "Bean", Sort = sort });
             return this;
         }
 

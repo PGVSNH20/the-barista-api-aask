@@ -7,11 +7,7 @@ public interface IBeverage{
 }
 
 
-class Bean
-{
-	int AmountInG { get; }
-	string Sort { get; }
-}
+
 
 class Espresso : IBeverage
 {
