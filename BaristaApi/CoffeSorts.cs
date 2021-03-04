@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BaristaApi
 {
-	enum CoffeSorts
+	public enum CoffeSorts
 	{
 		Robusta,
 		Arabica,

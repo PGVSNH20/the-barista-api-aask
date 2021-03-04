@@ -9,7 +9,7 @@ public interface IBeverage{
 
 
 
-class Espresso : IBeverage
+public class Espresso : IBeverage
 {
 	public List<Ingredient> Ingredients { get; } = new List<Ingredient> { 
 		new Ingredient() {Name = "Water"},
@@ -19,7 +19,7 @@ class Espresso : IBeverage
 	public string CupType { get; } = "Small";
 }
 
-class Latte : IBeverage
+public class Latte : IBeverage
 {
 	public List<Ingredient> Ingredients { get; } = new List<Ingredient> {
 		new Ingredient() {Name = "Water"},
@@ -30,7 +30,7 @@ class Latte : IBeverage
 	public string CupType { get; } = "Large";
 }
 
-class Cappuccino : IBeverage
+public class Cappuccino : IBeverage
 {
 	public List<Ingredient> Ingredients { get; } = new List<Ingredient> {
 		new Ingredient() {Name = "Water"},
@@ -42,7 +42,7 @@ class Cappuccino : IBeverage
 	public string CupType { get; } = "Medium";
 }
 
-class Americano : IBeverage
+public class Americano : IBeverage
 {
 	public List<Ingredient> Ingredients { get; } = new List<Ingredient> {
 		new Ingredient() {Name = "Water"},
@@ -52,7 +52,7 @@ class Americano : IBeverage
 	public string CupType { get; } = "Medium";
 }
 
-class Mocha : IBeverage
+public class Mocha : IBeverage
 {
 	public List<Ingredient> Ingredients { get; } = new List<Ingredient> {
 		new Ingredient() {Name = "Water"},
@@ -63,7 +63,7 @@ class Mocha : IBeverage
 
 	public string CupType { get; } = "Medium";
 }
-class Macchiato : IBeverage
+public class Macchiato : IBeverage
 {
 	public List<Ingredient> Ingredients { get; } = new List<Ingredient> {
 		new Ingredient() {Name = "Water"},
@@ -74,7 +74,7 @@ class Macchiato : IBeverage
 	public string CupType { get; } = "Large";
 }
 
-class CustomBeverage : IBeverage
+public class CustomBeverage : IBeverage
 {
 	public List<Ingredient> Ingredients { get; } = new List<Ingredient> {
 

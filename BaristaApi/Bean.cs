@@ -8,6 +8,6 @@ namespace BaristaApi
 {
 	public class Bean : Ingredient
 	{
-		CoffeSorts Sort { get; set; }
+		public CoffeSorts Sort { get; set; }
 	}
 }

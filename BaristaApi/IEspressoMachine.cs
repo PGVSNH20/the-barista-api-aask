@@ -2,11 +2,11 @@
 
 namespace BaristaApi
 {
-    internal interface IEspressoMachine
+    public interface IEspressoMachine
     {
         List<Ingredient>Ingredients { get; }
         IEspressoMachine AddWater(int v);
-        IEspressoMachine AddBeans();
+        IEspressoMachine AddBeans(CoffeSorts sort);
         IEspressoMachine AddMilk();
         IEspressoMachine AddMilkFoam();
         IEspressoMachine AddChocolateSyrup();

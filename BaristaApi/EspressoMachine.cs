@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace BaristaApi
 {
-    class EspressoMachine : IEspressoMachine
+    public class EspressoMachine : IEspressoMachine
     {
         public List<Ingredient> Ingredients { get; } = new List<Ingredient>();
 
         public IEspressoMachine AddBeans(CoffeSorts sort)
         {
-            Ingredients.Add(new Bean() { Name = "Bean", Sort = sort });
+            Ingredients.Add(new Bean() { Name = "Beans", Sort = sort });
             return this;
         }
 
