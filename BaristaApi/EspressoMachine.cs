@@ -61,13 +61,18 @@ namespace BaristaApi
 
                     List<string> americanoIngredients = new Americano().Ingredients.Select(ingr => ingr.Name).ToList();
                     americanoIngredients.Sort();
-                    if (beverageIngredients.SequenceEqual(americanoIngredients))
-                    {
-                        var waterIngredient = (Ingredient)Ingredients.Where(ingr => ingr.Name == "Water");
-                        var waterAmount = waterIngredient.Amount;
-                        if ()
-                        {
 
+                    if (beverageIngredients.SequenceEqual(americanoIngredients) && ingredientList.SequenceEqual(americanoIngredients))
+                    {
+                        var waterIngredient = Ingredients.Find(ingr => ingr.Name == "Water");
+                        var waterAmount = waterIngredient.Amount;
+                        if (waterAmount > 20)
+                        {
+                            return new Americano();
+                        }
+                        else
+                        {
+                            return new Espresso();
                         }
                     }
 
