@@ -1,17 +1,12 @@
+using BaristaApi;
 using System.Collections.Generic;
 
 public interface IBeverage{
-	List<string> Ingredients { get; }
+	public List<Ingredient> Ingredients { get; }
 	string CupType { get; }
 }
 
-enum CoffeSorts
-{
-	Robusta,
-	Arabica, 
 
-
-}
 class Bean
 {
 	int AmountInG { get; }
@@ -20,53 +15,74 @@ class Bean
 
 class Espresso : IBeverage
 {
-	public List<string> Ingredients { get; } = new List<string> { "Espresso" };
+	public List<Ingredient> Ingredients { get; } = new List<Ingredient> { 
+		new Ingredient() {Name = "Water"},
+		new Ingredient() {Name = "Beans"}
+	};
 		
 	public string CupType { get; } = "Small";
-
-	public IBeverage ToBeverage()
-	{
-
-	}
 }
 
 class Latte : IBeverage
 {
-	public List<string> Ingredients { get; } = new List<string> { "Espresso", "Milk" };
+	public List<Ingredient> Ingredients { get; } = new List<Ingredient> {
+		new Ingredient() {Name = "Water"},
+		new Ingredient() {Name = "Beans"},
+		new Ingredient() {Name = "Milk"}
+	};
 
 	public string CupType { get; } = "Large";
 }
 
 class Cappuccino : IBeverage
 {
-	public List<string> Ingredients { get; } = new List<string> { "Espresso", "Milk", "Milk foam" };
+	public List<Ingredient> Ingredients { get; } = new List<Ingredient> {
+        new Ingredient() {Name = "Water"},
+        new Ingredient() {Name = "Beans"},
+        new Ingredient() {Name = "Milk"},
+        new Ingredient() {Name = "Milk Foam"}
+    };
 
 	public string CupType { get; } = "Medium";
 }
 
 class Americano : IBeverage
 {
-	public List<string> Ingredients { get; } = new List<string> { "Espresso", "Water"};
+	public List<Ingredient> Ingredients { get; } = new List<Ingredient> {
+		new Ingredient() {Name = "Water"},
+		new Ingredient() {Name = "Beans"}
+	};
 
 	public string CupType { get; } = "Medium";
 }
 
 class Mocha : IBeverage
 {
-	public List<string> Ingredients { get; } = new List<string> { "Espresso", "Chocolate syrup", "Milk" };
+	public List<Ingredient> Ingredients { get; } = new List<Ingredient> {
+		new Ingredient() {Name = "Water"},
+		new Ingredient() {Name = "Beans"},
+		new Ingredient() {Name = "Chocolate Syrup"},
+		new Ingredient() {Name = "Milk"}
+	};
 
 	public string CupType { get; } = "Medium";
 }
 class Macchiato : IBeverage
 {
-	public List<string> Ingredients { get; } = new List<string> { "Espresso", "Milk Foam" };
+	public List<Ingredient> Ingredients { get; } = new List<Ingredient> {
+		new Ingredient() {Name = "Water"},
+		new Ingredient() {Name = "Beans"},
+		new Ingredient() {Name = "Milk Foam"}
+	};
 
 	public string CupType { get; } = "Large";
 }
 
 class CustomBeverage : IBeverage
 {
-	public List<string> Ingredients => throw new System.NotImplementedException();
+	public List<Ingredient> Ingredients { get; } = new List<Ingredient> {
 
-	public string CupType => throw new System.NotImplementedException();
+	};
+
+	public string CupType { get; } = "Medium";
 }
