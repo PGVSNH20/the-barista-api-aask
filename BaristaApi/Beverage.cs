@@ -25,9 +25,9 @@ class Espresso : IBeverage
 	public string CupType { get; } = "Small";
 
 	public IBeverage ToBeverage()
-    {
+	{
 
-    }
+	}
 }
 
 class Latte : IBeverage
