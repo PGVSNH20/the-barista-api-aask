@@ -37,7 +37,7 @@ namespace BaristaApi
 
         public IEspressoMachine AddWater(int v)
         {
-            Ingredients.Add(new Ingredient() { Name = "Water" });
+            Ingredients.Add(new Ingredient() { Name = "Water", Amount = v });
             return this;
         }
 
@@ -64,8 +64,8 @@ namespace BaristaApi
 
                     if (beverageIngredients.SequenceEqual(americanoIngredients) && ingredientList.SequenceEqual(americanoIngredients))
                     {
-                        var waterIngredient = Ingredients.Find(ingr => ingr.Name == "Water");
-                        var waterAmount = waterIngredient.Amount;
+                        var waterAmount = Ingredients.Find(ingr => ingr.Name == "Water").Amount;
+
                         if (waterAmount > 20)
                         {
                             return new Americano();
