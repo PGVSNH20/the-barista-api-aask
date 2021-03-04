@@ -59,6 +59,20 @@ namespace BaristaApi
                     beverageIngredients.Sort();
                     ingredientList.Sort();
 
+                    List<string> americanoIngredients = new Americano().Ingredients.Select(ingr => ingr.Name).ToList();
+                    americanoIngredients.Sort();
+                    if (beverageIngredients.SequenceEqual(americanoIngredients))
+                    {
+                        var waterIngredient = (Ingredient)Ingredients.Where(ingr => ingr.Name == "Water");
+                        var waterAmount = waterIngredient.Amount;
+                        if ()
+                        {
+
+                        }
+                    }
+
+
+
                     if (beverageIngredients.SequenceEqual(ingredientList))
                     {
                         return beverage;
