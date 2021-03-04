@@ -46,16 +46,26 @@ namespace BaristaApi
             Assembly assembly = Assembly.GetExecutingAssembly();
             Type[] types = assembly.GetTypes();
             
+            // Loopa igenom alla tillgängliga typer i assemblyt
             foreach(var type in types)
             {
+                // Kolla om nuvarande typen implementerar IBeverage
                 if (type.GetInterfaces().Contains(typeof(IBeverage)))
                 {
+                    IBeverage beverage = (IBeverage)Activator.CreateInstance(type);
+                    List<string> beverageIngredients = beverage.Ingredients.Select(ingr => ingr.Name).ToList();
+                    List<string> ingredientList = Ingredients.Select(ingr => ingr.Name).ToList();
 
+                    beverageIngredients.Sort();
+                    ingredientList.Sort();
+
+                    if (beverageIngredients.SequenceEqual(ingredientList))
+                    {
+                        return beverage;
+                    }
                 }
             }
-
-
-
+            return new CustomBeverage();
         }
     }
 }

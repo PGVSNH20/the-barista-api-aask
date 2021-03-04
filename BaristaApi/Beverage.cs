@@ -37,11 +37,11 @@ class Latte : IBeverage
 class Cappuccino : IBeverage
 {
 	public List<Ingredient> Ingredients { get; } = new List<Ingredient> {
-        new Ingredient() {Name = "Water"},
-        new Ingredient() {Name = "Beans"},
-        new Ingredient() {Name = "Milk"},
-        new Ingredient() {Name = "Milk Foam"}
-    };
+		new Ingredient() {Name = "Water"},
+		new Ingredient() {Name = "Beans"},
+		new Ingredient() {Name = "Milk"},
+		new Ingredient() {Name = "Milk Foam"}
+	};
 
 	public string CupType { get; } = "Medium";
 }
