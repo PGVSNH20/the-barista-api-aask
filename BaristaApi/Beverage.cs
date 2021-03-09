@@ -76,9 +76,7 @@ public class Macchiato : IBeverage
 
 public class CustomBeverage : IBeverage
 {
-	public List<Ingredient> Ingredients { get; } = new List<Ingredient> {
-
-	};
+	public List<Ingredient> Ingredients { get; } = new List<Ingredient> {};
 
 	public string CupType { get; } = "Medium";
 }
